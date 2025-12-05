@@ -402,7 +402,7 @@ class AmiiboIcons: public tsl::elm::Element {
                 return;
             }
             if(this->cur_virtual_amiibo_image.GetPath() != path) {
-                this->cur_virtual_amiibo_image.Load(path + "/amiibo.png", GetIconMaxWidth(), IconMaxHeight);
+                this->cur_virtual_amiibo_image.Load(path + "/anllbo.png", GetIconMaxWidth(), IconMaxHeight);
             }
         }
 
