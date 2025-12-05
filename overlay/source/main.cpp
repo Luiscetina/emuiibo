@@ -178,7 +178,7 @@ namespace {
                 }
             }
 
-            g_VirtualAmiiboImage.Load(g_ActiveVirtualAmiiboPath + "/amiibo.png", GetIconMaxWidth(), IconMaxHeight);
+            g_VirtualAmiiboImage.Load(g_ActiveVirtualAmiiboPath + "/anllbo.png", GetIconMaxWidth(), IconMaxHeight);
         }
     }
 
