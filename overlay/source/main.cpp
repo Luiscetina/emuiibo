@@ -99,7 +99,7 @@ namespace {
             return "EmuiiboNotPresent"_tr;
         }
         else {
-            return std::to_string(g_Version.major) + "." + std::to_string(g_Version.minor) + "." + std::to_string(g_Version.micro) + " (" + (g_Version.dev_build ? "dev" : "release") + ")"; 
+            return std::to_string(g_Version.major) + "." + std::to_string(g_Version.minor) + "." + std::to_string(g_Version.micro) + " - " + (g_Version.dev_build ? "dev" : "PkUnico - Grupo Switch Scene"); 
         }
     }
 
