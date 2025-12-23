@@ -63,14 +63,14 @@ jobs:
 
     - name: Build emuiibo and overlay (.nsp + .ovl)
       run: |
-        make -C overlay
         make emuiibo -j$(nproc)
       env:
         DEVKITPRO: /opt/devkitpro
         DEVKITARM: /opt/devkitpro/devkitARM
 
-    - name: Pack ZIP (include .nsp + .ovl)
+    - name: Repack ZIP (remove SdOut folder)
       run: |
+        rm -f emuiibo.zip
         cd SdOut
         zip -r ../emuiibo.zip .
 
@@ -104,12 +104,3 @@ jobs:
         generate_release_notes: true
         prerelease: false
         token: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: All-Artifacts
-        path: |
-          SdOut
-          emuiigen/target/emuiigen.jar
-        if-no-files-found: error
