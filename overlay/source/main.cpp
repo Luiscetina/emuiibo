@@ -133,7 +133,7 @@ namespace {
         else {
             std::stringstream strm;
             strm << "emuiibo v" << (int)g_Version.major << "." << (int)g_Version.minor << "." << (int)g_Version.micro;
-            strm << " (" << (g_Version.dev_build ? "dev" : "release") << ")";
+            strm << " (" << (g_Version.dev_build ? "dev" : "PkUnico - Grupo Switch Scene") << ")";
             if(g_InitializationStatus == InitializationStatus::OkVersionMismatch) {
                 strm << "(outdated, expected v" << (int)ExpectedVersion.major << "." << (int)ExpectedVersion.minor << "." << (int)ExpectedVersion.micro << ")";
             }
@@ -218,7 +218,7 @@ namespace {
                 }
             }
 
-            g_VirtualAmiiboImage.Load(g_ActiveVirtualAmiiboPath + "/amiibo.png", GetIconMaxWidth(), IconMaxHeight);
+            g_VirtualAmiiboImage.Load(g_ActiveVirtualAmiiboPath + "/anllbo.png", GetIconMaxWidth(), IconMaxHeight);
         }
     }
 
@@ -442,7 +442,7 @@ class AmiiboIcons: public tsl::elm::Element {
                 return;
             }
             if(this->cur_virtual_amiibo_image.GetPath() != path) {
-                this->cur_virtual_amiibo_image.Load(path + "/amiibo.png", GetIconMaxWidth(), IconMaxHeight);
+                this->cur_virtual_amiibo_image.Load(path + "/anllbo.png", GetIconMaxWidth(), IconMaxHeight);
             }
         }
 
